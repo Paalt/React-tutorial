@@ -1,0 +1,439 @@
+<html>
+<head>
+  <title>My cv</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+    .Page-header {
+      height: 40px;
+      background-color: #777;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      box-shadow: 2px 4px #eee;
+    }
+
+    .Page-title {
+      color: #fff;
+      margin: 5px 2rem;
+      font-size: 24px;
+    }
+
+    .Page-navigation {
+      padding-top: 10px;
+      margin-left: 2rem;
+      text-align: right;
+    }
+
+    .Page-main {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .Page-sidebar {
+      background-color: #ccc;
+      padding: 1rem;
+    }
+
+    .u-unstyled-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .u-mt-10 {
+      margin-top: 4rem;
+    }
+
+    .nav-item {
+      display: inline;
+      margin-right: 2rem;
+    }
+    .nav-link {
+      color: #fff;
+    }
+
+    .CvBasics-details {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .CvBasics-profilePicture {
+      width: 200px;
+    }
+
+    .CvBasics-summary {
+      height: 400px;
+    }
+
+    .CvWork-card {
+      display: grid;
+      grid-template-rows: 1fr 30px 1fr 1fr;
+    }
+
+    .CvWork-cardHeader {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .CvEducation-cardHeader {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .CvVolunteer-card {
+      display: grid;
+      grid-template-rows: 1fr 30px 1fr 1fr;
+    }
+
+    .CvVolunteer-cardHeader {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .CvAward-cardDetails {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .CvReferences-labels,
+    .CvReferences-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
+</head>
+<body>
+  <header class="Page-header">
+    <h1 class="Page-title">Quadim CV</h1>
+    <nav class="Page-navigation">
+      <ul class="u-unstyled-list">
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link">Navigation link</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link">Navigation link</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link">Navigation link</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link">Navigation link</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="Page-main">
+    <div class="left-col">
+      <section class="CvBasics">
+        <h1>${Name}</h1>
+        <h2>${label}</h2> <!-- "Programmer" -->
+        <div class="CvBasics-details">
+          <div class="col1">
+            <figure>
+              <picture>
+                <source
+                  media="(min-width: 650px)"
+                  srcset="profile_picture-md.jpg">
+                <source
+                  media="(min-width: 465px)"
+                  srcset="profile_picture-sm.jpg">
+                <img
+                  src="img_profile-pciture-lg.jpg"
+                  alt="Profile-picture"
+                  class="CvBasics-profilePicture">
+              </picture>
+            </figure>
+          </div>
+          <div class="col2">
+            <div>
+              <h3>Contact</h3>
+              <ul class="u-unstyled-list">
+                <li>
+                  ${email}
+                </li>
+                <li>
+                  ${phone}
+                </li>
+                <li>
+                  ${website}
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <ul class="u-unstyled-list">
+                <li>
+                  ${adress}
+                </li>
+                <li>
+                  ${postalCode}
+                </li>
+                <li>
+                  ${city}
+                </li>
+                <li>
+                  ${countryCode}
+                </li>
+                <li>
+                  ${region}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h3>Summary</h3>
+        <p class="CvBasics-summary">
+          ${summary}
+        </p>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>Social profiles</h2>
+        <div class="social-card">
+          <h3>${network}</h3>
+          <ul>
+            <li>
+              ${userName}
+            </li>
+            <li>
+              ${url}
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>Work experience</h2>
+        <div class="CvWork-card">
+          <div class="CvWork-cardHeader">
+            <h3>${company}</h3>
+            <h4>${position}</h4>
+            <p>
+              Start date: ${startDate}
+            </p>
+            <p>
+              End date: ${endDate}
+            </p>
+          </div>
+          <div class="row">
+            <ul>
+              <li>
+                ${website}
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <h4>Summary</h4>
+            <p>
+              ${summary}
+            </p>
+          </div>
+          <div class="row">
+            <h4>Hightlights</h4>
+            <p>
+              ${highlights}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>Education</h2>
+        <div class="CvEducation-card">
+          <div class="CvEducation-cardHeader">
+            <h3>${institution}</h3>
+            <h4>${studyType} of ${area}</h4>
+            <p>
+              Start date: ${startDate}
+            </p>
+            <p>
+              End date: ${endDate}
+            </p>
+          </div>
+          <div class="row">
+            <h4>Courses</h4>
+            <ul>
+              <lu>${course}</lu>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>Volunteer</h2>
+        <div class="CvVolunteer-card">
+          <div class="CvVolunteer-cardHeader">
+            <h3>${organization}</h3>
+            <h4>${position}</h4>
+            <p>
+              Start date: ${startDate}
+            </p>
+            <p>
+              End date: ${endDate}
+            </p>
+          </div>
+          <div class="row">
+            <ul>
+              <li>
+                ${website}
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <h4>Summary</h4>
+            <p>
+              ${summary}
+            </p>
+          </div>
+          <div class="row">
+            <h4>Hightlights</h4>
+            <p>
+              ${highlights}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>Awards</h2>
+        <div class="CvAward-card">
+          <h3>${title}</h3>
+          <div class="CvAward-cardDetails">
+            <h4>${date}</h4>
+            <h4>${awarder}</h4> <!-- Company -->
+          </div>
+          <p>
+            ${summary}
+          </p>
+        </div>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>References</h2>
+        <div class="CvReferences-labels">
+          <div class="col1">
+            <h3>Name</h3>
+          </div>
+          <div class="col2">
+            <h3>Reference</h3>
+          </div>
+        </div>
+        <div class="CvReferences-details">
+          <div class="col1">
+            <p>
+              ${name}
+            </p>
+          </div>
+          <div class="col2">
+            <p>
+              ${reference}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mt-10">
+        <h2>Publications</h2>
+        <div class="publication-card">
+          <h3>${Name}</h3>
+          <h4>Published by: {publisher} on ${releaseDate}</h4>
+          <p>
+            {website}
+          </p>
+          <p>
+            ${summary}
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <aside class="Page-sidebar">
+
+      <section>
+        <h2>Languages</h2>
+        <div class="row">
+          <div class="col1">
+            <p>
+              ${language}:
+            </p>
+          </div>
+          <div class="col2">
+            <p>
+              ${fluency}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-card">
+          <div class="row">
+            <div class="col1">
+              <p>
+                ${name}:
+              </p>
+            </div>
+            <div class="col2">
+              <p>
+                ${level}
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <h3>Keywords</h3>
+            <ul>
+              <li>
+                ${keyword}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Interests</h2>
+        <div class="skill-card">
+          <div class="row">
+            <p>
+              ${name}:
+            </p>
+          </div>
+          <div class="row">
+            <h3>Keywords</h3>
+            <ul>
+              <li>
+                ${keyword}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </aside>
+  </main>
+  <footer>
+
+  </footer>
+
+
+</body>
+</html>

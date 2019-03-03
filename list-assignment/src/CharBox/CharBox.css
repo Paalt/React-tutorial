@@ -1,0 +1,6 @@
+.Char-component {
+  display: inline-block;
+  padding: 16px;
+  border: 1px solid black;
+  background: pink;
+}
